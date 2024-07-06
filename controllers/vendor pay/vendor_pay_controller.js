@@ -12,7 +12,10 @@ const addVendorPay = async(req,res)=>{
                 vendorPayataxMoney:vendor.salesTax,
                 vendorPaySalesMoney:vendor.myFreeSales,
                 vendorPayDate:Date.now(),
-                vendorPayVendorId:vendor.id
+                vendorPayVendorId:vendor.id,
+                vendorPayEmail:vendor.email,
+                vendorPayPhone:vendor.phone,
+                vendorPayUserName:vendor.userName
             });
            
             const courier = new CourierClient(
