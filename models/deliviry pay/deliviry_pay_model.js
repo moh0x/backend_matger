@@ -23,6 +23,24 @@ const deliviryPaySchema = new mongoose.Schema({
         type:Number,
         
     },
+    deliviryPayUserName:{
+        type:String,
+        required:true,
+        maxLength:30,
+        minLength:3
+    },
+    deliviryPayPhone:{
+        type:String,
+        required:true,
+        maxLength:30,
+        minLength:3
+    },
+    deliviryPayEmail:{
+        type:String,
+        required:true,
+        maxLength:50,
+        minLength:3
+    }
    
 });
 const  DeliviryPay = mongoose.model("DeliviryPay",deliviryPaySchema);
