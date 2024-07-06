@@ -23,6 +23,24 @@ const vendorPaySchema = new mongoose.Schema({
         type:Number,
         
     },
+    vendorPayUserName:{
+        type:String,
+        required:true,
+        maxLength:30,
+        minLength:3
+    },
+    vendorPayPhone:{
+        type:String,
+        required:true,
+        maxLength:30,
+        minLength:3
+    },
+    vendorPayEmail:{
+        type:String,
+        required:true,
+        maxLength:50,
+        minLength:3
+    }
    
 });
 const  VendorPay = mongoose.model("VendorPay",vendorPaySchema);
