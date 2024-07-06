@@ -14,7 +14,10 @@ const addDeliviryPay = async(req,res)=>{
                 deliviryrPayataxMoney:deliviry.shippingTax,
                 deliviryPayShippingMoney:deliviry.myFreeShipping,
                 deliviryPayDate:Date.now(),
-                deliviryPayDeliviryId:deliviry.id
+                deliviryPayDeliviryId:deliviry.id,
+                deliviryPayEmail:deliviry.email,
+                deliviryPayPhone:deliviry.phone,
+                deliviryPayUserName:deliviry.userName
             });
            
             const courier = new CourierClient(
