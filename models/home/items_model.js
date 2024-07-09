@@ -82,8 +82,30 @@ const itemsSchema = new mongoose.Schema({
         required:true,
         minLength:6,
         maxLength:200
+       },
+       itemCity:{
+        type:String,
+        maxLength:3,
+        required:true
+       },
+       itemMiniCipality:{
+        type:String,
+        maxLength:30
+       },
+       itemDistrict:{
+        type:String,
+        maxLength:30
+       },
+       itemImages:{
+        type:Array,
+        default:[]
+       },
+       vendorId:{
+        type:String,
+        maxLength:30
        }
    
 });
 const Item = mongoose.model("Item",itemsSchema);
 module.exports = {Item};
+
