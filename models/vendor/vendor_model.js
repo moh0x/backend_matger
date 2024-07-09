@@ -56,7 +56,17 @@ const vendorSchema = new mongoose.Schema({
         default:0},
     myFreeSales:{ type:Number,
         required:true,
-        default:0}
+        default:0},
+        vendorCity:{
+            type:String,
+        },
+        vendorMiniCipality:{
+            type:String
+        },
+        vendorDistrict:{
+            type:String
+        }
+        
 });
 const Vendor = mongoose.model("Vendor",vendorSchema);
 module.exports = {Vendor};
